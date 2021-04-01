@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap");
+html,
+body {
+  font-family: "Kiwi Maru", serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+html *,
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.f-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #021b79;
+  background: -webkit-gradient(linear, left bottom, left top, from(#021b79), to(#0575e6));
+  background: linear-gradient(to top, #021b79, #0575e6);
+  color: #eaeaea;
+}
+
+.f-page .f-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.f-page .f-content .f-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+.f-page .f-content .f-box .f-header {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion {
+  -webkit-box-shadow: 0 0 5px 1px #000000;
+          box-shadow: 0 0 5px 1px #000000;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-question {
+  font-size: 1.5em;
+  font-weight: 400;
+  word-spacing: 10px;
+  letter-spacing: 2px;
+  padding: 10px;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionHeader {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #eaeaea;
+  -webkit-box-shadow: 0 0 5px 1px #000000;
+          box-shadow: 0 0 5px 1px #000000;
+  border-radius: 10px;
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionBody .f-iconContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionBody .f-iconContent .f-goodIcon {
+  font-size: 2em;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionBody .f-good {
+  z-index: 10;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionBody .f-good .f-check {
+  z-index: 11;
+}
+
+.f-page .f-content .f-box .f-body.f-optionsQuestion .f-questionContent .f-answers .f-answersOption .f-answerOptionBody:hover .f-iconContent {
+  opacity: 1;
+}
+/*# sourceMappingURL=styles.css.map */
