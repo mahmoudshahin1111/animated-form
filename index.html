@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Feedback Form</title>
+    <title>Made For Fun 🔥🎉👏</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,13 +14,13 @@
         <div class="f-content">
             <div class="f-box">
                 <div class="f-header">
-                    Appointments:
+                    Me:
                 </div>
                 <!-- Options -->
                 <div class="f-body f-optionsQuestion ">
                     <div class="f-questionContent">
                         <div class="f-question">
-                            It was easy to make my first appointment ?
+                            How you are feeling today?
                         </div>
                         <div class="f-answers">
                             <div class="f-answersOption">
@@ -31,8 +31,12 @@
                                     <span class="f-iconContent">
                                         <span class="f-goodIcon">😊</span>
                                     </span>
-                                    <span class="f-good">
-                                        <span class="f-check"></span>
+                                    <span class="f-checkContainer">
+                                        <svg class="f-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M0 11.386l1.17-1.206c1.951.522 5.313 1.731 8.33 3.597 3.175-4.177 9.582-9.398 13.456-11.777l1.044 1.073-14 18.927-10-10.614z" />
+                                        </svg>
                                     </span>
                                 </div>
                                 <input type="radio" name="questionOne" style="display: none;">
@@ -45,8 +49,12 @@
                                     <span class="f-iconContent">
                                         <span class="f-goodIcon">😟</span>
                                     </span>
-                                    <span class="f-good">
-                                        <span class="f-check"></span>
+                                    <span class="f-checkContainer">
+                                        <svg class="f-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M0 11.386l1.17-1.206c1.951.522 5.313 1.731 8.33 3.597 3.175-4.177 9.582-9.398 13.456-11.777l1.044 1.073-14 18.927-10-10.614z" />
+                                        </svg>
                                     </span>
                                 </div>
                                 <input type="radio" name="questionOne" style="display: none;">
@@ -59,13 +67,23 @@
                 <!-- Enter Information -->
 
                 <!-- End Enter Information -->
-                
+
             </div>
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script>
+        function selectOption(e) {
+            questionOptions.removeClass('selected').find('input[name=questionOne]').removeAttr('checked', false);
+            $(e.currentTarget).addClass('selected').find('input[name=questionOne]').attr('checked', true);
+        }
 
-    <script src="./script.js"></script>
+        const questionOptions = $('.f-answersOption');
+        questionOptions.on('click', (e) => selectOption(e));
+
+    </script>
 </body>
 
 </html>

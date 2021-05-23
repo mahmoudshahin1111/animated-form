@@ -88,6 +88,7 @@ body {
                 letter-spacing: 3px;
               }
               .f-answerOptionBody {
+                position: relative;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -109,17 +110,39 @@ body {
                     font-size: $font-xl;
                   }
                 }
-                .f-good {
-                  z-index: 10;
+                .f-checkContainer {
+                  position: absolute;
+                  display: grid;
+                  z-index: 11;
+                  width: 100%;
+                  height: 100%;
+                  top: 0;
+                  left: 0;
+                  place-items: center;
+                  opacity: 0;
                   .f-check {
-                    z-index: 11;
+                    display: block;
+                    transform: scale(4) translateY(-0.15rem) translateX(0.1rem);
+                    stroke-dasharray: 20px;
+                    fill-opacity: 0.6;
+                    stroke-width: 0;
                   }
-                }
+                                }
+              
               }
               .f-answerOptionBody:hover {
                 .f-iconContent {
                   opacity: 1;
                 }
+              }
+            }
+            .f-answersOption.selected{
+              .f-iconContent{
+                display: none;
+              }
+              .f-checkContainer{
+                opacity: 1;
+                transition: all 1s ease;
               }
             }
           }
